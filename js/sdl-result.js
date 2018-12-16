@@ -105,7 +105,7 @@ function downloadSRT(vttStr) {
 
 function webvtt2srt(data) {
       data = data.replace("WEBVTT\n\n","")
-      data = data.replace(/\<c\>/g,"")
+      data = data.replace(/\<c\.S3\>/g,"")
       data = data.replace(/\<\/c\>/g,"")
       // remove dos newlines
       var srt = data.replace(/\r+/g, '')
