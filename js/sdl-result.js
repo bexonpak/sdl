@@ -15,7 +15,7 @@ $(function() {
     alert('请使用版本稍稍新一点的浏览器吧，你这也太旧了，不仅功能太旧而且还不安全哦。')
     return false
   }
-  e = getParams("id");
+  e = getParams("e");
   getXML('https://www.daserste.de/unterhaltung/soaps-telenovelas/sturm-der-liebe/videos/folge-' + e + '-video-100~playerXml.xml')
 })
 
