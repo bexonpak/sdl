@@ -15,31 +15,10 @@ $(function() {
     alert('请使用版本稍稍新一点的浏览器吧，你这也太旧了，不仅功能太旧而且还不安全哦。')
     return false
   }
-  e = getParams(‘e’);
-  if(e == null || e == "") {
-  	alert('未传入集数')
-  }
+
+  e = localStorage.getItem('e')
   getXML('https://www.daserste.de/unterhaltung/soaps-telenovelas/sturm-der-liebe/videos/folge-' + e + '-video-100~playerXml.xml')
 })
-
-function  getParams(name, href) {
-    var href = href || window.location.href,
-      value = '';
-
-    if (name) {
-      var reg = new RegExp(name + '=([^&]*)', 'g');
-      href.replace(reg, function($0, $1) {
-        value = decodeURI($1);
-      });
-    } else {
-      value = {};
-      var reg = /\b(\w+)=([^\/&]*)/g;
-      href.replace(reg, function($0, $1, $2) {
-        value[$1] = decodeURI($2);
-      });
-    }
-    return value;
-  };
 
 function getXML(url) {
   $.ajax({
