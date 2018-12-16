@@ -16,6 +16,10 @@ $('#btn').click(function() {
 })
 
 function checkSupport() {
+  var userAgent = navigator.userAgent
+  if(u.indexOf('BiliApp') > -1) {
+    alert('请使用浏览器打开')
+  }
   if (typeof(Storage) == 'undefined') {
     alert('请使用版本稍稍新一点的浏览器吧，你这也太旧了，不仅功能太旧而且还不安全哦。')
     return false
