@@ -11,7 +11,8 @@ $('#btn').click(function() {
     alert('请输入集数')
     return false
   }
-  location.href = 'result.html?e=' + e
+  localStorage.setItem('e', e);
+  self.location.href = 'result.html'
 })
 
 function checkSupport() {
@@ -20,11 +21,10 @@ function checkSupport() {
     return false
   }
 }
-
-function checkLast() {
-  var lastE = localStorage.getItem('e')
-  if (lastE != null) {
-    $('#last').text('你上次解析了第' + lastE + '集')
-    $('#last').css('display', 'block')
-  }
-}
+ function checkLast() {
+   var lastE = localStorage.getItem('e')
+   if (lastE != null) {
+     $('#last').text('你上次解析了第' + lastE + '集')
+     $('#last').css('display', 'block')
+   }
+ }
