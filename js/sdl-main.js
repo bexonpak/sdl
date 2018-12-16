@@ -12,7 +12,8 @@ $('#btn').click(function() {
     return false
   }
   localStorage.setItem('e', e);
-  window.location.replace('result.html')
+
+  location.href = 'result.html?e=' + e
 })
 
 function checkSupport() {
