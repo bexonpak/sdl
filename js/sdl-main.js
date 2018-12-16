@@ -12,7 +12,7 @@ $('#btn').click(function() {
     return false
   }
   localStorage.setItem('e', e);
-  self.location.href = 'result.html'
+  window.location.href = 'result.html'
 })
 
 function checkSupport() {
