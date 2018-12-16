@@ -11,8 +11,6 @@ $('#btn').click(function() {
     alert('请输入集数')
     return false
   }
-  localStorage.setItem('e', e);
-
   location.href = 'result.html?e=' + e
 })
 
