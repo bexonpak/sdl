@@ -17,7 +17,7 @@ $('#btn').click(function() {
 
 function checkSupport() {
   var userAgent = navigator.userAgent
-  if(u.indexOf('BiliApp') > -1) {
+  if(userAgent.indexOf('BiliApp') > -1) {
     alert('请使用浏览器打开')
   }
   if (typeof(Storage) == 'undefined') {
