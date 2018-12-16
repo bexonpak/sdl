@@ -15,8 +15,19 @@ $(function() {
     alert('请使用版本稍稍新一点的浏览器吧，你这也太旧了，不仅功能太旧而且还不安全哦。')
     return false
   }
+  var str = window.location.search   // location.search是从当前URL的?号开始的字符串        
+  if (str.indexOf(e) != -1) {            
+      var pos_start = str.indexOf(e) + e.length + 1;       
+      var pos_end = str.indexOf("&", pos_start);            //检查是否有其他的参数传递
+      if (pos_end == -1) {                
+          e = str.substring(pos_start)
+      } else {         
+         alert('没有传集数')
+	 return false
+      }        
+  }
 
-  e = localStorage.getItem('e')
+
   getXML('https://www.daserste.de/unterhaltung/soaps-telenovelas/sturm-der-liebe/videos/folge-' + e + '-video-100~playerXml.xml')
 })
 
