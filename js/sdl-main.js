@@ -3,7 +3,7 @@ $(function() {
   checkLast()
 })
 
-(document).keydown(function(e) {
+$(document).keydown(function(e) {
   if (e.keyCode == 13) {
     btnClick()
   }
