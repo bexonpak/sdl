@@ -72,7 +72,7 @@ function onVideoURLClick(type) {
 }
 
 function getWebVTT() {
-  download(subUrl, 'sdl-' + e + '.vtt', "text/vtt")
+  download(subUrl, 'sdl-' + e + '.de.vtt', "text/vtt")
 }
 
 function getSRT() {
@@ -101,7 +101,7 @@ function vtt2srt(data) {
 function downloadSRT(vttStr) {
   var srtBlob = new Blob([vttStr])
   console.log(srtBlob)
-  download(srtBlob, 'sdl-' + e + '.srt', "text/srt")
+  download(srtBlob, 'sdl-' + e + '.de.srt', "text/srt")
 }
 
 function webvtt2srt(data) {
