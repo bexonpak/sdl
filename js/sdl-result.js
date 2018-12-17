@@ -61,7 +61,7 @@ function setData() {
   $('#v720url').val(v720p)
   $('#v540url').val(v540p)
   $('#v270url').val(v270p)
-  $('title').text('第' + e + '集 - ')
+  $('title').text('第' + e + '集 - SDL')
 }
 
 function onVideoURLClick(type) {
