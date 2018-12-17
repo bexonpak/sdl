@@ -3,6 +3,12 @@ $(function() {
   checkLast()
 })
 
+(document).keydown(function(e) {
+  if (e.keyCode == 13) {
+    btnClick()
+  }
+});
+
 $('#btn').click(function() {
   checkSupport()
   var e = $('#e').val().trim()
@@ -11,9 +17,21 @@ $('#btn').click(function() {
     alert('请输入集数')
     return false
   }
-  localStorage.setItem('e', e);
+  localStorage.setItem('e', e)
   self.location.href = 'result.html'
 })
+
+function btnClick() {
+  checkSupport()
+  var e = $('#e').val().trim()
+  console.log(e)
+  if(e<=0||e.length == 0) {
+    alert('请输入集数')
+    return false
+  }
+  localStorage.setItem('e', e)
+  self.location.href = 'result.html'
+}
 
 function checkSupport() {
   var userAgent = navigator.userAgent
